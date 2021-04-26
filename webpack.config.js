@@ -5,10 +5,17 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist",
+    port: 7000,
+    hot: true,
+  },
   entry: { myEntry: "./src/index.js" },
   output: {
     filename: "[name].bundle.[hash].js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/test",
   },
   module: {
     rules: [
@@ -22,7 +29,7 @@ module.exports = {
         options: {
           name: "foo.[name].[ext]",
           outputPath: "images/",
-          publicPath: "/dist/images",
+          publicPath: "/test/images",
         },
       },
     ],

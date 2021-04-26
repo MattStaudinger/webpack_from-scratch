@@ -5,9 +5,9 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: { myEntry: "./src/index.js" },
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.[hash].js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -27,4 +27,13 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new cleanWebpackPlugin(["dist"]),
+    new htmlWebpackPlugin({
+      title: "html webpack plugin",
+      filename: "myIndex.html",
+      template: "./index.html",
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };

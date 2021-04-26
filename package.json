@@ -1,0 +1,33 @@
+{
+  "name": "webpack_main_proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattStaudinger/webpack_from-scratch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "4.15.1",
+    "webpack-cli": "3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/MattStaudinger/webpack_from-scratch/issues"
+  },
+  "homepage": "https://github.com/MattStaudinger/webpack_from-scratch#readme"
+}

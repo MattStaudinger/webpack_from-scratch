@@ -1,3 +1,3 @@
 import $ from "jquery";
 
-$("body").append("<p id='first'>SECOND.js by jquery</p>");
+$("body").append("<p id='third'>SECOND.js by jquery</p>");

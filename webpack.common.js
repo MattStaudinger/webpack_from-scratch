@@ -3,7 +3,13 @@ const cleanWebpackPlugin = require("clean-webpack-plugin");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: { myEntry: "./src/index.js" },
+  entry: {
+    // myEntry: "./src/index.js",
+    first: "./js/first.js",
+    second: "./js/second.js",
+    third: "./js/third.js",
+    css: "./css/main.css",
+  },
   output: {
     filename: "[name].bundle.[hash].js",
     path: path.resolve(__dirname, "dist"),

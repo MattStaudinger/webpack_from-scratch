@@ -12,6 +12,31 @@
   background: crimson;
 }
 
+#register_btn {
+  padding: 20px;
+  background-color: teal;
+  margin: 10px;
+  font-size: 20px;
+}
+#login_btn {
+  padding: 20px;
+  background-color: yellow;
+  margin: 10px;
+  font-size: 20px;
+}
+
+#login {
+  color: black;
+  padding: 100px;
+  background-color: yellow;
+}
+
+#register {
+  color: black;
+  padding: 100px;
+  background-color: teal;
+}
+
 body {
   font-size: 24px;
   line-height: 60px;

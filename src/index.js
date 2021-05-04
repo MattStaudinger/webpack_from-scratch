@@ -2,9 +2,6 @@ import "../js/first.js";
 import "../js/second.js";
 import "../js/third.js";
 
-import login from "../js/login";
-import register from "../js/register";
-
 import "../css/main.css";
 
 const loginButton = document.createElement("button");
@@ -25,9 +22,14 @@ body.appendChild(registerButton);
 body.appendChild(div);
 
 loginButton.addEventListener("click", function () {
-  login();
+  import(/*webpackChunkName: "login"*/ "../js/login").then((module) => {
+    console.log("module: ", module);
+    module.loginPage();
+  });
 });
-
 registerButton.addEventListener("click", function () {
-  register();
+  import(/*webpackChunkName: "register"*/ "../js/register").then((module) => {
+    console.log("module: ", module);
+    module.registerPage();
+  });
 });

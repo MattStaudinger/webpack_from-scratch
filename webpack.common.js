@@ -4,15 +4,16 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    myEntry: "./src/index.js",
+    bundle: "./src/index.js",
     // first: "./js/first.js",
     // second: "./js/second.js",
     // third: "./js/third.js",
     // css: "./css/main.css",
   },
   output: {
-    filename: "[name].bundle.[hash].js",
+    filename: "[name].[hash].js",
     path: path.resolve(__dirname, "dist"),
+    chunkFilename: "dynamic.[name].[contenthash].js",
   },
   module: {
     rules: [

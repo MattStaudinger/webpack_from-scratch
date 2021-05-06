@@ -2,6 +2,7 @@ const path = require("path");
 const cleanWebpackPlugin = require("clean-webpack-plugin");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -27,6 +28,11 @@ module.exports = {
       },
 
       {
+        test: /\.less$/,
+        use: [MiniCSSExtractPlugin.loader, "css-loader", "less-loader"],
+      },
+
+      {
         test: /\.(png|jpg|jpeg|svg|gif)$/,
         loader: "file-loader",
         options: {
@@ -46,6 +52,9 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
+    }),
+    new MiniCSSExtractPlugin({
+      filename: "./css/mycss.[name].css",
     }),
   ],
 };

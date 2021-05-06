@@ -2,7 +2,7 @@ import "../js/first.js";
 import "../js/second.js";
 import "../js/third.js";
 
-import "../css/main.css";
+import "../css/main.less";
 
 const loginButton = document.createElement("button");
 loginButton.innerText = "Login";

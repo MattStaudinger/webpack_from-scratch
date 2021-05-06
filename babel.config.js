@@ -6,6 +6,7 @@ module.exports = {
         targets: ">0.25%",
 
         useBuiltIns: "usage",
+        corejs: "2",
       },
     ],
   ],
